@@ -6,18 +6,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Teacher {
+public class Classroom {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	
-	public Teacher() 
+	public Classroom() 
 	{
 		
 	}
 	
-	public Teacher(String title) 
+	public Classroom(String title) 
 	{
 		this.setName(title);
 	}
