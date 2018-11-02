@@ -1,0 +1,1 @@
+INSERT INTO TEACHER (firstName) VALUES ('John')
