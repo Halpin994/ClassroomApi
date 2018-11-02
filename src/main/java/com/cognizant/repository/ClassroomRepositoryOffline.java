@@ -21,7 +21,7 @@ public class ClassroomRepositoryOffline implements IClassroomRepository {
     public String createClassroom(String cl) {
         Classroom classroom = util.getObjectForJSON(cl, Classroom.class);
         classrooms.put(classroom.getId(), classroom);
-        return "{\"message\": \"trainee has been successfully added\"}";
+        return "{\"message\": \"classroom has been successfully added\"}";
     }
 
     @Override
@@ -32,7 +32,7 @@ public class ClassroomRepositoryOffline implements IClassroomRepository {
     @Override
     public String deleteClassroom(Long classroomId) {
     	classrooms.remove(classroomId);
-        return "{\"message\": \"trainee sucessfully deleted\"}";
+        return "{\"message\": \"classroom sucessfully deleted\"}";
     }
 
     @Override
