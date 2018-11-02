@@ -22,7 +22,7 @@ public class Classroom {
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "classroom_id", referencedColumnName="classroom_id")
-	public Set<Trainee> students;
+	public Set<Trainee> trainees;
 	
 	public Classroom() 
 	{
@@ -44,11 +44,11 @@ public class Classroom {
 	}
 
 	public Set<Trainee> getStudents() {
-		return students;
+		return trainees;
 	}
 
 	public void setStudents(Set<Trainee> students) {
-		this.students = students;
+		this.trainees = students;
 	}
 
 	public Long getId() {

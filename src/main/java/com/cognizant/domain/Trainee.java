@@ -13,9 +13,10 @@ public class Trainee {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String name;
 	@Column(name = "classroom_id")
 	private Long classroomID;
+	private String traineeName;
+
 	
 	Trainee ()
 	{
@@ -24,16 +25,16 @@ public class Trainee {
 	
 	public Trainee(String name) 
 	{
-		this.name = name;
+		this.traineeName = name;
 		
 	}
 
 	public String getName() {
-		return name;
+		return traineeName;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.traineeName = name;
 	}
 
 	public Long getId() {
