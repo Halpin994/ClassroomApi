@@ -1,23 +1,31 @@
 package com.cognizant.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-public class Student {
+@Entity
+public class Trainee {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	@Column(name = "classroom_id")
+	private Long classroomID;
 	
-	Student ()
+	Trainee ()
 	{
 		
 	}
 	
-	public Student(String title) 
+	public Trainee(String name) 
 	{
-		this.setName(title);
+		this.name = name;
+		
 	}
 
 	public String getName() {

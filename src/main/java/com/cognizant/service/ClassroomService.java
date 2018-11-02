@@ -4,7 +4,7 @@ import javax.inject.Inject;
 
 import com.cognizant.repository.IClassroomRepository;
 
-public class ClassroomService {
+public class ClassroomService implements IClassroomService {
 
 	@Inject
 	private IClassroomRepository repo;

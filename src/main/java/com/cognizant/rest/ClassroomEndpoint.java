@@ -27,7 +27,7 @@ public class ClassroomEndpoint {
 	@Path("/getClassroom/{id}")
 	@GET
 	@Produces({ "application/json" })
-	public String getAllClassrooms(@PathParam("id") Long id) {
+	public String getClassroom(@PathParam("id") Long id) {
 		return service.getClassroom(id);
 	}
 

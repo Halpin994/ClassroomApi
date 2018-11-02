@@ -1,8 +1,6 @@
 package com.cognizant.repository;
 
 
-
-
 import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.transaction.Transactional.TxType.SUPPORTS;
 
@@ -29,15 +27,15 @@ public class ClassroomRepositoryOnline implements IClassroomRepository {
 	private Util util;
 
 	public String getAllClassrooms() {
-		Query query = manager.createQuery("Select a FROM Movie a");
+		Query query = manager.createQuery("Select a FROM Classroom a");
 		Collection<Classroom> classrooms = (Collection<Classroom>) query.getResultList();
 		return util.getJSONForObject(classrooms);
 	}
 
 	@Transactional(REQUIRED)
-	public String createClassroom(String jsonMovie) {
-		Classroom anMovie = util.getObjectForJSON(jsonMovie, Classroom.class);
-		manager.persist(anMovie);
+	public String createClassroom(String jsonClassroom) {
+		Classroom aClassroom = util.getObjectForJSON(jsonClassroom, Classroom.class);
+		manager.persist(aClassroom);
 		return "{\"message\": \"classroom has been sucessfully added\"}";
 	}
 

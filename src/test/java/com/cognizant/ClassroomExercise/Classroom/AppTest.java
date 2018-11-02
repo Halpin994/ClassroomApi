@@ -1,4 +1,4 @@
-package com.qa.ClassroomExercise.Classroom;
+package com.cognizant.ClassroomExercise.Classroom;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
