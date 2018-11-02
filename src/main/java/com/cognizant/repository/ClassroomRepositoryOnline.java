@@ -38,7 +38,7 @@ public class ClassroomRepositoryOnline implements IClassroomRepository {
 	public String createClassroom(String jsonMovie) {
 		Classroom anMovie = util.getObjectForJSON(jsonMovie, Classroom.class);
 		manager.persist(anMovie);
-		return "{\"message\": \"movie has been sucessfully added\"}";
+		return "{\"message\": \"classroom has been sucessfully added\"}";
 	}
 
 	@Transactional(REQUIRED)
@@ -47,7 +47,7 @@ public class ClassroomRepositoryOnline implements IClassroomRepository {
 		if (classroomInDB != null) {
 			manager.remove(classroomInDB);
 		}
-		return "{\"message\": \"movie sucessfully deleted\"}";
+		return "{\"message\": \"classroom sucessfully deleted\"}";
 	}
 	
 	public String getClassroom(Long id) {

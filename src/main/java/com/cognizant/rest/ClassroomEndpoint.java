@@ -38,7 +38,7 @@ public class ClassroomEndpoint {
 		return service.createClassroom(classroom);
 	}
 
-	@Path("/deleteMovie/{id}")
+	@Path("/deleteClassroom/{id}")
 	@DELETE
 	@Produces({ "application/json" })
 	public String deleteClassroom(@PathParam("id") Long id) {
